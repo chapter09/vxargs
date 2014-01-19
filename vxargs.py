@@ -220,7 +220,15 @@ def handler(signum, frame_unused):
         gsl.stop()
 
 def generateCommands(cmd_line, args):
-    return [per_arg.replace('{}', args[0]) for per_arg in cmd_line]
+    cmd_list = []
+    for per_arg in cmd_line:
+        if per_arg == '{}':
+            cmd_list.extend(args[0].split(' '))
+        else:
+            cmd_list.append(per_arg)
+    return cmd_list
+
+    # return [per_arg.replace('{}', args[0]) for per_arg in cmd_line]
         
 def spawn(cmdline, outfn, errfn, setpgrp = False):
    """A cleverer spawn that lets you redirect stdout and stderr to
