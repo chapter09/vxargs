@@ -6,4 +6,4 @@ vxargs is inspired by xargs and pssh. It provides the parallel versions of any a
 * the original version is from [http://vxargs.sourceforge.net](http://vxargs.sourceforge.net)
 
 ###change log
-* [19 January, 2014] now in the input file, we can support '-p 30122 wanghao@sing.cse.ust.hk' 
+* [19 January, 2014] now in the input file, we can support '-p PORT USERNAME@HOSTNAME' 
